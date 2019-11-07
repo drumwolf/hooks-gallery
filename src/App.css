@@ -1,22 +1,20 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
+.App-count {
+  background-color: #E7E7E7;
+  border-radius: 50%;
+  height: 50px;
+  line-height: 50px;
+  margin: 20px auto;
+  width: 50px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+.App-btn {
+  background-color: #300;
+  border-radius: 15px;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 18px;
+  outline: none;
+  width: 40px;
 }
