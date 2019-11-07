@@ -1,7 +1,7 @@
-.App {
+.carousel {
   text-align: center;
 }
-.App-count {
+.carousel-count {
   background-color: #E7E7E7;
   border-radius: 50%;
   height: 50px;
@@ -9,7 +9,7 @@
   margin: 20px auto;
   width: 50px;
 }
-.App-btn {
+.carousel-btn {
   background-color: #300;
   border-radius: 15px;
   color: #FFF;
