@@ -3,7 +3,7 @@ import './Gallery.css';
 
 function GalleryPhoto(props) {
   return (<section className="gallery-frame">
-    <img className="gallery-image" src={`/img/${ (props.imageData) ? props.imageData.filename : '' }`} />
+    <img className="gallery-image" src={process.env.PUBLIC_URL + `/img/${ (props.imageData) ? props.imageData.filename : '' }`} />
   </section>);
 }
 
