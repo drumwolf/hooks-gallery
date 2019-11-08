@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
 import './Gallery.css';
 
+/***** second-level components *****/
+function GalleryBtn(props) {
+  const classSelector = `gallery-btn-${props.direction || 'left'}`;
+  const char = (props.direction === 'left') ? '-' : '+';
+  return <button className={classSelector} onClick={props.onBtnClick}>{char}</button>;
+}
+
 function GalleryPhoto(props) {
   return (<section className="gallery-frame">
     <img className="gallery-image" src={process.env.PUBLIC_URL + `/img/${ (props.imageData) ? props.imageData.filename : '' }`} />
   </section>);
 }
 
+/***** top-level component *****/
 function Gallery() {
+  const [index, setIndex] = useState(0);
   const IMAGES = [
     { filename: "diner.jpg",  name: "psychedelicatessen" },
     { filename: "joy.jpg",    name: "poster of joy" },
@@ -26,9 +35,7 @@ function Gallery() {
     { filename: 'deejay.jpg',   name: "hey mister deejay" },
     { filename: 'chester.gif',  name: "we are not neanderthal" }
   ];
-  let [index, setIndex] = useState(0);
-
-  const incrementCount = (inc) => {
+  const incrementIndex = (inc) => {
     setIndex( (index + inc + IMAGES.length) % IMAGES.length );
   };
 
@@ -36,8 +43,12 @@ function Gallery() {
     <div className="gallery">
       <h2 className="gallery-header">{IMAGES[index].name}</h2>
       <GalleryPhoto imageData={IMAGES[index]} />
-      <button className="gallery-btn-left" onClick={ incrementCount.bind(this, -1) }> - </button>
-      <button className="gallery-btn-right" onClick={ incrementCount.bind(this, 1) }> + </button>
+      <GalleryBtn direction="left"  onBtnClick={ incrementIndex.bind(this, -1) } />
+      <GalleryBtn direction="right" onBtnClick={ incrementIndex.bind(this, 1) } />
+      <p className="gallery-text">This is a collection of my early digital artwork from my younger days.
+      I've titled this "Hooks Gallery" because it's my first project built with React Hooks.
+      <a href="//github.com/drumwolf/hooks-gallery">You can view the source code here</a>.
+      </p>
     </div>
   );
 }

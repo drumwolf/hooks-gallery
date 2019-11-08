@@ -1,7 +1,7 @@
 .gallery {
   background-color: #E7E7E7;
   border-radius: 5%;
-  height: 420px;
+  height: 480px;
   margin: 20px auto;
   position: relative;
   width: 550px;
@@ -13,7 +13,7 @@
   text-align: center;
 }
 .gallery-frame {
-  height: 380px;
+  height: 370px;
   position: relative;
   text-align: center;
 }
@@ -41,4 +41,8 @@
 }
 .gallery-btn-right {
   right: 15px;
+}
+.gallery-text {
+  font-size: 13px;
+  margin: 0 40px;
 }
