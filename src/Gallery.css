@@ -1,0 +1,23 @@
+.gallery {
+  margin: 0 auto;
+  height: 220px;
+  position: relative;
+  width: 220px;
+}
+.gallery-count {
+  background-color: #E7E7E7;
+  text-align: center;  
+}
+.gallery-btn {
+  background-color: #300;
+  border-radius: 15px;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 18px;
+  outline: none;
+  width: 40px;
+}
+.gallery-image {
+  width: 200px;
+  height: 200px;
+}

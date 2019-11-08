@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import PhotoCarousel from './PhotoCarousel';
+import Gallery from './Gallery';
 
-ReactDOM.render(<PhotoCarousel />, document.getElementById('root'));
+ReactDOM.render(<Gallery />, document.getElementById('gallery'));
