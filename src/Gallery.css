@@ -1,23 +1,44 @@
 .gallery {
-  margin: 0 auto;
-  height: 220px;
-  position: relative;
-  width: 220px;
-}
-.gallery-count {
   background-color: #E7E7E7;
-  text-align: center;  
+  border-radius: 5%;
+  height: 420px;
+  margin: 20px auto;
+  position: relative;
+  width: 550px;
 }
-.gallery-btn {
+.gallery-header {
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  text-align: center;
+}
+.gallery-frame {
+  height: 380px;
+  position: relative;
+  text-align: center;
+}
+.gallery-image {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); 
+  position: absolute; 
+}
+.gallery-btn-left,
+.gallery-btn-right {
   background-color: #300;
-  border-radius: 15px;
+  border-radius: 50%;
   color: #FFF;
   cursor: pointer;
   font-size: 18px;
+  height: 30px;
   outline: none;
-  width: 40px;
+  position: absolute;
+  top: calc(50% - 15px);
+  width: 30px;
 }
-.gallery-image {
-  width: 200px;
-  height: 200px;
+.gallery-btn-left {
+  left: 15px;
+}
+.gallery-btn-right {
+  right: 15px;
 }
