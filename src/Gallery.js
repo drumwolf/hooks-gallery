@@ -47,7 +47,7 @@ function Gallery() {
       <GalleryBtn direction="right" onBtnClick={ incrementIndex.bind(this, 1) } />
       <p className="gallery-text">This is a collection of my early digital artwork from my younger days.
       I've titled this "Hooks Gallery" because it's my first project built with React Hooks.
-      <a href="//github.com/drumwolf/hooks-gallery">You can view the source code here</a>.
+      You can view the source code <a href="//github.com/drumwolf/hooks-gallery">here</a>.
       </p>
     </div>
   );
